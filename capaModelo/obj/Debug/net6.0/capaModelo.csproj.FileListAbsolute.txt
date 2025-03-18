@@ -1,0 +1,12 @@
+/Users/luzalmanzar/Projects/capaModelo/bin/Debug/net6.0/capaModelo.deps.json
+/Users/luzalmanzar/Projects/capaModelo/bin/Debug/net6.0/capaModelo.dll
+/Users/luzalmanzar/Projects/capaModelo/bin/Debug/net6.0/capaModelo.pdb
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.csproj.AssemblyReference.cache
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.AssemblyInfoInputs.cache
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.AssemblyInfo.cs
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.csproj.CoreCompileInputs.cache
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.dll
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/refint/capaModelo.dll
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/capaModelo.pdb
+/Users/luzalmanzar/Projects/capaModelo/obj/Debug/net6.0/ref/capaModelo.dll

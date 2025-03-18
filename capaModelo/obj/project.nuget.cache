@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RAh2P8Tq+ME=",
+  "success": true,
+  "projectFilePath": "/Users/luzalmanzar/Projects/capaModelo/capaModelo.csproj",
+  "expectedPackageFiles": [
+    "/Users/luzalmanzar/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/luzalmanzar/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

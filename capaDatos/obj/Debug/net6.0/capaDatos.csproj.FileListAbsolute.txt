@@ -1,0 +1,12 @@
+/Users/luzalmanzar/Projects/capaDatos/bin/Debug/net6.0/capaDatos.deps.json
+/Users/luzalmanzar/Projects/capaDatos/bin/Debug/net6.0/capaDatos.dll
+/Users/luzalmanzar/Projects/capaDatos/bin/Debug/net6.0/capaDatos.pdb
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.csproj.AssemblyReference.cache
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.AssemblyInfoInputs.cache
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.AssemblyInfo.cs
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.csproj.CoreCompileInputs.cache
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.dll
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/refint/capaDatos.dll
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/capaDatos.pdb
+/Users/luzalmanzar/Projects/capaDatos/obj/Debug/net6.0/ref/capaDatos.dll

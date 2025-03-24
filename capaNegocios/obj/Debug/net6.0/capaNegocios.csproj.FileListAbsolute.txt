@@ -1,0 +1,12 @@
+/Users/luzalmanzar/Projects/capaNegocios/bin/Debug/net6.0/capaNegocios.deps.json
+/Users/luzalmanzar/Projects/capaNegocios/bin/Debug/net6.0/capaNegocios.dll
+/Users/luzalmanzar/Projects/capaNegocios/bin/Debug/net6.0/capaNegocios.pdb
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.csproj.AssemblyReference.cache
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.AssemblyInfoInputs.cache
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.AssemblyInfo.cs
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.csproj.CoreCompileInputs.cache
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.dll
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/refint/capaNegocios.dll
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/capaNegocios.pdb
+/Users/luzalmanzar/Projects/capaNegocios/obj/Debug/net6.0/ref/capaNegocios.dll

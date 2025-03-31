@@ -1,0 +1,9 @@
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\bin\Debug\Libreria4.exe.config
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\bin\Debug\Libreria4.exe
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\bin\Debug\Libreria4.pdb
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.csproj.AssemblyReference.cache
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.Properties.Resources.resources
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.csproj.GenerateResource.cache
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.csproj.CoreCompileInputs.cache
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.exe
+C:\Users\Josue De Moya\source\repos\Libreria4\Libreria4\obj\Debug\Libreria4.pdb

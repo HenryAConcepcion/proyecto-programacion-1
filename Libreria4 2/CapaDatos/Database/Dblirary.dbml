@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="master" Class="DbliraryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JOSUE\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="masterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Equipos" Member="Equipos">
+    <Type Name="Equipos">
+      <Column Name="IdEquipo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdSala" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreEquipo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Salas_Equipos" Member="Salas" ThisKey="IdSala" OtherKey="IdSala" Type="Salas" IsForeignKey="true" />
+      <Association Name="ConfiguracionSistema_Equipos" Member="ConfiguracionSistema" ThisKey="IdEquipo" OtherKey="IdConfiguracion" Type="ConfiguracionSistema" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HistorialUso" Member="HistorialUso">
+    <Type Name="HistorialUso">
+      <Column Name="IdHistorial" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdReservacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaUso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Asistio" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Reservaciones_HistorialUso" Member="Reservaciones" ThisKey="IdReservacion" OtherKey="IdReservacion" Type="Reservaciones" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Horarios" Member="Horarios">
+    <Type Name="Horarios">
+      <Column Name="IdHorario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoraInicio" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="HoraFin" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Association Name="Horarios_Reservaciones" Member="Reservaciones" ThisKey="IdHorario" OtherKey="IdHorario" Type="Reservaciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportesIncidencias" Member="ReportesIncidencias">
+    <Type Name="ReportesIncidencias">
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdSala" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaReporte" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Salas_ReportesIncidencias" Member="Salas" ThisKey="IdSala" OtherKey="IdSala" Type="Salas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservaciones" Member="Reservaciones">
+    <Type Name="Reservaciones">
+      <Column Name="IdReservacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdSala" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdHorario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Reservaciones_HistorialUso" Member="HistorialUso" ThisKey="IdReservacion" OtherKey="IdReservacion" Type="HistorialUso" />
+      <Association Name="Horarios_Reservaciones" Member="Horarios" ThisKey="IdHorario" OtherKey="IdHorario" Type="Horarios" IsForeignKey="true" />
+      <Association Name="Salas_Reservaciones" Member="Salas" ThisKey="IdSala" OtherKey="IdSala" Type="Salas" IsForeignKey="true" />
+      <Association Name="Usuarios_Reservaciones" Member="Usuarios" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Roles">
+      <Column Name="IdRol" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Roles_Usuarios" Member="Usuarios" ThisKey="IdRol" OtherKey="TipoUsuario" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Salas" Member="Salas">
+    <Type Name="Salas">
+      <Column Name="IdSala" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreSala" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoSala" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ubicación" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Capacidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Salas_Equipos" Member="Equipos" ThisKey="IdSala" OtherKey="IdSala" Type="Equipos" />
+      <Association Name="Salas_ReportesIncidencias" Member="ReportesIncidencias" ThisKey="IdSala" OtherKey="IdSala" Type="ReportesIncidencias" />
+      <Association Name="Salas_Reservaciones" Member="Reservaciones" ThisKey="IdSala" OtherKey="IdSala" Type="Reservaciones" />
+      <Association Name="TiposSala_Salas" Member="TiposSala" ThisKey="TipoSala" OtherKey="IdTipoSala" Type="TiposSala" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TiposSala" Member="TiposSala">
+    <Type Name="TiposSala">
+      <Column Name="IdTipoSala" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreTipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TiposSala_Salas" Member="Salas" ThisKey="IdTipoSala" OtherKey="TipoSala" Type="Salas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreCompleto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_Reservaciones" Member="Reservaciones" ThisKey="IdUsuario" OtherKey="IdUsuario" Type="Reservaciones" />
+      <Association Name="Roles_Usuarios" Member="Roles" ThisKey="TipoUsuario" OtherKey="IdRol" Type="Roles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfiguracionSistema" Member="ConfiguracionSistema">
+    <Type Name="ConfiguracionSistema">
+      <Column Name="IdConfiguracion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Clave" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="ConfiguracionSistema_Equipos" Member="Equipos" ThisKey="IdConfiguracion" OtherKey="IdEquipo" Type="Equipos" Cardinality="One" />
+    </Type>
+  </Table>
+</Database>
